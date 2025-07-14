@@ -14,11 +14,22 @@ syn keyword centSpecial null undefined
 
 syn keyword centType i8 i16 i32 i64 isize u8 u16 u32 u64 usize f32 f64 str bool
 
+syn match centDec display /\<[0-9][0-9_]*/
+syn match centHex display /\<0x[0-9a-fA-F_]*/
+syn match centBin display /\<0b[01_]*/
+syn match centOct display /\<0o[0-7_]*/
+
 hi def link centKeyword Keyword
 hi def link centStmt Statement
 hi def link centWith Statement
 hi def link centBool Boolean
 hi def link centSpecial Constant
 hi def link centType Type
+
+hi def link centDec centNumber
+hi def link centHex centNumber
+hi def link centOct centNumber
+hi def link centBin centNumber
+hi def link centNumber Number
 
 let b:current_syntax = "cent"
