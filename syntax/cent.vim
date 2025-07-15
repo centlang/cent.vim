@@ -21,6 +21,8 @@ syn match centOct display /\<0o[0-7_]*/
 
 syn match centFloat display /\<[0-9][0-9_]*\.[0-9_]\+/
 
+syn region centString start=/"/ end=/"/ skip=/\\"/
+
 hi def link centKeyword Keyword
 hi def link centStmt Statement
 hi def link centWith Statement
@@ -34,5 +36,7 @@ hi def link centOct centNumber
 hi def link centBin centNumber
 hi def link centNumber Number
 hi def link centFloat Float
+
+hi def link centString String
 
 let b:current_syntax = "cent"
