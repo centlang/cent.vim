@@ -31,6 +31,8 @@ syn region centString start=/"/ end=/"/ skip=/\\"/ contains=centEscape
 syn keyword centAttr contained extern
 syn region centAttrs start="!(" end=")" contains=centAttr
 
+syn region centComment start=/\/\// end="$"
+
 hi def link centKeyword Keyword
 hi def link centStmt Statement
 hi def link centWith Statement
@@ -51,5 +53,7 @@ hi def link centString String
 
 hi def link centAttr Keyword
 hi def link centAttrs Preproc
+
+hi def link centComment Comment
 
 let b:current_syntax = "cent"
