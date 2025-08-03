@@ -2,19 +2,18 @@ if exists("b:current_syntax")
     finish
 endif
 
-syn keyword centKeyword pub fn type union enum let mut const
+syn keyword centKeyword pub fn type union enum in let mut const
 
-syn keyword centStmt if else switch return break continue unreachable assert
-syn keyword centStmt while
-
+syn keyword centStmt if else switch return break continue unreachable while for
 syn keyword centWith with
 
 syn keyword centBool true false
 syn keyword centSpecial null undefined
 
-syn keyword centType i8 i16 i32 i64 isize u8 u16 u32 u64 usize f32 f64 str bool
+syn keyword centType i8 i16 i32 i64 isize u8 u16 u32 u64 usize f32 f64 bool
+syn keyword centType never
 
-syn keyword centOper as
+syn keyword centOper as sizeof
 syn match centOper display /\%(+\|-\|*\|\/\|%\|!\|&\||\|^\|<\|>\|=\)=\?/
 syn match centOper display /&&\|||/
 
@@ -28,7 +27,7 @@ syn match centFloat display /\<[0-9][0-9_]*\.[0-9_]\+/
 syn match centEscape display contained /\\[nrt'"\\]/
 syn region centString start=/"/ end=/"/ skip=/\\"/ contains=centEscape
 
-syn keyword centAttr contained extern
+syn keyword centAttr contained extern distinct untagged
 syn region centAttrs start="!(" end=")" contains=centAttr
 
 syn region centComment start=/\/\// end="$"
