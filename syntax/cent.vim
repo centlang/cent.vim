@@ -2,9 +2,11 @@ if exists("b:current_syntax")
     finish
 endif
 
-syn keyword centKeyword pub fn type union enum in let mut const
+syn keyword centKeyword pub fn type union enum let mut const
 
-syn keyword centStmt if else switch return break continue unreachable while for
+syn keyword centCond if else switch
+syn keyword centRepeat while for in
+syn keyword centStmt return break continue unreachable
 syn keyword centWith with
 
 syn keyword centBool true false
@@ -33,6 +35,8 @@ syn region centAttrs start="!(" end=")" contains=centAttr
 syn region centComment start=/\/\// end="$"
 
 hi def link centKeyword Keyword
+hi def link centCond Conditional
+hi def link centRepeat Repeat
 hi def link centStmt Statement
 hi def link centWith Statement
 hi def link centBool Boolean
