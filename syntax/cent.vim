@@ -47,6 +47,7 @@ hi link centStructName Structure
 hi link centOper Operator
 hi link centDec centNumber
 hi link centHex centNumber
+hi link centBin centNumber
 hi link centOct centNumber
 hi link centNumber Number
 hi link centFloat Float
