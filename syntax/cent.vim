@@ -19,7 +19,8 @@ syn match centBin /\<0b[01_]*/ display
 syn match centOct /\<0o[0-7_]*/ display
 syn match centFloat /\<[0-9][0-9_]*\.[0-9_]\+/ display
 syn match centEscape /\\[nrt'"\\]/ display contained
-syn region centString start=/"/ end=/"/ skip=/\\"/ contains=centEscape
+
+syn region centString start=/"/ end=/"/ skip=/\\"/ contains=centEscape,@Spell
 syn region centRune start=/'/ end=/'/ skip=/\\'/ contains=centEscape
 
 syn keyword centUnderscore _
@@ -39,7 +40,7 @@ syn keyword centAttr extern distinct untagged contained
 syn keyword centTodo TODO FIXME NOTE contained
 
 syn region centAttrs start="!(" end=")" contains=centAttr
-syn region centComment start=/\/\// end="$" contains=centTodo
+syn region centComment start=/\/\// end="$" contains=centTodo,@Spell
 
 hi link centIdent Identifier
 hi link centModuleSep centPathSep
