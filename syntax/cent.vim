@@ -22,6 +22,7 @@ syn match centEscape /\\[nrt'"\\]/ display contained
 syn region centString start=/"/ end=/"/ skip=/\\"/ contains=centEscape
 syn region centRune start=/'/ end=/'/ skip=/\\'/ contains=centEscape
 
+syn keyword centUnderscore _
 syn keyword centKeyword type union enum nextgroup=centStructName skipwhite skipempty
 syn keyword centKeyword fn nextgroup=centFnName skipwhite skipempty
 syn keyword centKeyword with nextgroup=centModule skipwhite skipempty
@@ -55,6 +56,7 @@ hi link centFloat Float
 hi link centEscape Special
 hi link centString String
 hi link centRune Character
+hi link centUnderscore Ignore
 hi link centKeyword Keyword
 hi link centStmt Statement
 hi link centCond Conditional
