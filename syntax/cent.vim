@@ -2,15 +2,15 @@ if exists("b:current_syntax")
     finish
 endif
 
-syn match centIdent /\<[a-zA-Z_][a-zA-Z0-9_]*/ display
+syn match centIdent /\<[a-zA-Z_][a-zA-Z0-9_]*\>/ display
 syn match centPathSep /::/ display
 syn match centModuleSep /::/ display contained nextgroup=centModule skipwhite skipempty
-syn match centModule /\<[a-zA-Z_][a-zA-Z0-9_]*/ display contained nextgroup=centModuleSep skipwhite skipempty
-syn match centFnCall /\<[a-zA-Z_][a-zA-Z0-9_]*(/he=e-1,me=e-1 display
-syn match centFnName /\<[a-zA-Z_][a-zA-Z0-9_]*/ display contained
-syn match centStructName /\<[a-zA-Z_][a-zA-Z0-9_]*/ display contained
+syn match centModule /\<[a-zA-Z_][a-zA-Z0-9_]*\>/ display contained nextgroup=centModuleSep skipwhite skipempty
+syn match centFnCall /\<[a-zA-Z_][a-zA-Z0-9_]*\s*(/he=e-1,me=e-1 display
+syn match centFnName /\<[a-zA-Z_][a-zA-Z0-9_]*\>/ display contained
+syn match centStructName /\<[a-zA-Z_][a-zA-Z0-9_]*\>/ display contained
 
-syn match centOper /\%(+\|-\|*\|\/\|%\|!\|&\||\|^\|<\|>\|=\)=\?/ display
+syn match centOper /\(+\|-\|*\|\/\|%\|!\|&\||\|\^\|<\|>\|=\)=\?/ display
 syn match centOper /&&\|||\|??/ display
 syn match centDec /\<[0-9][0-9_]*/ display
 syn match centHex /\<0x[0-9a-fA-F_]*/ display
