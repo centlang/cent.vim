@@ -11,6 +11,7 @@ syn match centFnName /\<[a-zA-Z_][a-zA-Z0-9_]*\>/ display contained
 syn match centStructName /\<[a-zA-Z_][a-zA-Z0-9_]*\>/ display contained
 
 syn match centOper /\(+\|-\|*\|\/\|%\|!\|&\||\|\^\|<\|>\|=\)=\?/ display
+syn match centOper /\~/ display
 syn match centOper /&&\|||\|??/ display
 syn match centDec /\<[0-9][0-9_]*/ display
 syn match centHex /\<0x[0-9a-fA-F_]*/ display
