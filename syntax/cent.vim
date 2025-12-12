@@ -36,8 +36,10 @@ syn keyword centType i8 i16 i32 i64 isize u8 u16 u32 u64 usize f32 f64 bool
 syn keyword centType never
 syn keyword centOper as sizeof
 syn keyword centAttr extern distinct untagged contained
+syn keyword centTodo TODO FIXME NOTE contained
+
 syn region centAttrs start="!(" end=")" contains=centAttr
-syn region centComment start=/\/\// end="$"
+syn region centComment start=/\/\// end="$" contains=centTodo
 
 hi link centIdent Identifier
 hi link centModuleSep centPathSep
@@ -65,6 +67,7 @@ hi link centBool Boolean
 hi link centSpecial Constant
 hi link centType Type
 hi link centAttr Keyword
+hi link centTodo Todo
 hi link centAttrs Preproc
 hi link centComment Comment
 
