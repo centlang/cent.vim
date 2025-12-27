@@ -39,7 +39,7 @@ syn keyword centOper as sizeof
 syn keyword centAttr extern distinct untagged contained
 syn keyword centTodo TODO FIXME NOTE contained
 
-syn region centAttrs start="!(" end=")" contains=centAttr
+syn region centAttrs start="#(" end=")" contains=centAttr
 syn region centComment start=/\/\// end="$" contains=centTodo,@Spell
 
 hi link centIdent Identifier
