@@ -36,7 +36,7 @@ syn keyword centSpecial null undefined
 syn keyword centType i8 i16 i32 i64 isize u8 u16 u32 u64 usize f32 f64 bool
 syn keyword centType never
 syn keyword centOper as sizeof
-syn keyword centAttr extern distinct untagged contained
+syn keyword centAttr extern alwaysinline distinct untagged contained
 syn keyword centTodo TODO FIXME NOTE contained
 
 syn region centAttrs start="#(" end=")" contains=centAttr
