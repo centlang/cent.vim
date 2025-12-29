@@ -19,6 +19,9 @@ syn match centBin /\<0b[01_]*/ display
 syn match centOct /\<0o[0-7_]*/ display
 syn match centFloat /\<[0-9][0-9_]*\.[0-9_]\+/ display
 syn match centEscape /\\[nrt'"\\]/ display contained
+syn match centEscape /\\u[0-9a-fA-F]{4}/ display contained
+syn match centEscape /\\U[0-9a-fA-F]{8}/ display contained
+syn match centEscape /\\x[0-9a-fA-F]{2}/ display contained
 
 syn region centString start=/"/ end=/"/ skip=/\\"/ contains=centEscape,@Spell
 syn region centRune start=/'/ end=/'/ skip=/\\'/ contains=centEscape
