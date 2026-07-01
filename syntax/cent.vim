@@ -31,7 +31,7 @@ syn keyword centKeyword type union enum nextgroup=centStructName skipwhite skipe
 syn keyword centKeyword fn nextgroup=centFnName skipwhite skipempty
 syn keyword centKeyword with nextgroup=centModule skipwhite skipempty
 syn keyword centKeyword pub let mut const
-syn keyword centStmt return break continue unreachable
+syn keyword centStmt return break continue unreachable defer
 syn keyword centCond if else switch
 syn keyword centRepeat while for in
 syn keyword centBool true false
