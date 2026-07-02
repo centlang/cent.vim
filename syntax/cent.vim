@@ -39,10 +39,10 @@ syn keyword centSpecial null undefined
 syn keyword centType i8 i16 i32 i64 isize u8 u16 u32 u64 usize f32 f64 bool
 syn keyword centType never rune
 syn keyword centOper as sizeof
-syn keyword centAttr extern alwaysinline distinct untagged contained
+syn keyword centAttr extern alwaysinline distinct untagged contained symbol
 syn keyword centTodo TODO FIXME NOTE contained
 
-syn region centAttrs start="#(" end=")" contains=centAttr
+syn region centAttrs start="#(" end=")" contains=centAttr,centString
 syn region centComment start=/\/\// end="$" contains=centTodo,@Spell
 
 hi link centIdent Identifier
